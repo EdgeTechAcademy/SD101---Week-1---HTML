@@ -7,14 +7,16 @@
 </head>
 
 <body>
-  <form class="" action="index.html" method="post">
+  <form>
     <fieldset>
       <legend>Checkout</legend>
       <label for="txtFirstName">First Name:</label>
       <input type="text" name="txtFirstName" id="txtFirstName" value="">
+      
       <label for="txtLastName">Last Name:</label>
       <input type="text" name="txtLastName" id="txtLastName" value="">
       <br>
+      
       <label for="rbCCType">Credit Card Type</label><br>
       <input type="radio" name="rbCCType" value="Visa">Visa <br>
       <input type="radio" name="rbCCType" value="Mastercard">Master Card<br>
@@ -38,8 +40,8 @@
         <option value="11">November</option>
         <option value="12">December</option>
       </select>
-      <label for="ExpireYear">Day:</label>
-      <input type="number" name="ExpireYear" min="2018" max="2024"><br><br>
+      <label for="ExpireYear">Year:</label>
+      <input type="number" name="ExpireYear" id="ExpireYear" min="2018" max="2024"><br><br>
       <label for="checkedSaveCard">Save Card for Futre Purchases</label>
       <input type="checkbox" name="checkedSaveCard" id- "checkedSaveCard">
       <br><br>
