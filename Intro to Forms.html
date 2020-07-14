@@ -11,7 +11,7 @@
   <form action="search" method="get">
     <fieldset>
       <legend>Dali Art</legend>
-      <input type="text" name="txtSearchBox" value="">
+      <input type="text" name="txtSearchBox" id="txtSearchBox" value="">
     </fieldset>
   </form>
 
@@ -29,13 +29,14 @@
 
   <form class="textArea" action="index.html" method="get">
     <label for="txtComments">Product Return: (please describe reason for return: 100 char limit)</label><br>
-    <textarea name="txtComments" id="txtComments" maxlength="100" style="margin: 0px; width: 310px; height: 115px;">Leave a Comment</textarea>
+    <textarea name="txtComments" id="txtComments" maxlength="100"
+      style="margin: 0px; width: 310px; height: 115px;">Leave a Comment</textarea>
   </form>
 
   <form action="Checkout" method="GET">
     <fieldset>
       <legend>Checkout</legend>
-      <label for="rbCCType">Credit Card Type</label><br>
+      <label for="rbVisa">Credit Card Type</label><br>
       <input type="radio" name="rbCCType" id="rbVisa" value="Visa">Visa<br>
       <input type="radio" name="rbCCType" id="rbMasterCard" value="MasterCard">Master Card<br>
       <input type="radio" name="rbCCType" id="rbDiscover" value="Discover">Discover<br>
@@ -78,7 +79,7 @@
     <fieldset>
       <legend>Dali Artwork</legend>
       <label for="txtSearchBox">Search for Works by Dali:</label>
-      <input type="text" name="txtSearchBox">
+      <input type="text" name="txtSearchBox" id="txtSearchBox">
       <button type="submit"><img src="images/magnifyingGlass.png" width="15px" height="15px"></button>
       <button type="submit">Search for</button>
     </fieldset>
@@ -108,17 +109,21 @@
       <br>
     </fieldset>
   </form>
-</body>
-<script>
-  let name = document.getElementById('txtUserName');
-  name.value = 'Edge Tech Academy';
-  name.style.color = 'white';
-  name.style.backgroundColor = 'lightblue';
-  name.style.borderRadius = '50px';
-  
+  <script>
+    let name = document.getElementById('txtUserName');
+    name.value = 'Edge Tech Academy';
+    name.style.color = 'red';
+    name.style.backgroundColor = 'black';
+    name.style.borderRadius = '6px';
+    name.style.borderStyle = 'dashed';
 
-function changeColor(color) {
-  document.body.style.backgroundColor = color;
-}
-</script>
+    let paswd = document.getElementById('txtPassword');
+    paswd.style.backgroundColor = 'lightgreen';
+
+    function changeColor(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+
 </html>
