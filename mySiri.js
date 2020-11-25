@@ -14,7 +14,7 @@ const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 let toggleBtn = null;
 if (typeof SpeechRecognition === "undefined") {
     startBtn.remove();
-    result.innerHTML = "<b  >Browser does not support Speech API. Please download latest chrome.<b>";
+    result.innerHTML = "<b>Browser does not support Speech API. Please download latest chrome.<b>";
 } else {
     const recognition = new SpeechRecognition();
     recognition.continuous = true;
@@ -50,7 +50,6 @@ if (typeof SpeechRecognition === "undefined") {
         listening = !listening;
     };
     startBtn.addEventListener("click", toggleBtn);
-
 }
 
 // processor
@@ -59,24 +58,12 @@ function process(rawText) {
     text = text.toLowerCase();
     let response = null;
     switch (text) {
-        case "hello":
-            response = "hi, how are you doing?";
-            break;
-        case "what'syourname":
-            response = "My name's Siri.";
-            break;
-        case "howareyou":
-            response = "I'm good.";
-            break;
-        case "whattimeisit":
-            response = new Date().toLocaleTimeString();
-            break;
-        case "who'syourdaddy":
-            response = 'that would be Gary';
-            break;
-        case "stop":
-            response = "Bye!!";
-            toggleBtn();
+        case "hello":           response = "hi, how are you doing?";        break;
+        case "what'syourname":  response = "My name's Siri.";               break;
+        case "howareyou":       response = "I'm good.";                     break;
+        case "whattimeisit":    response = new Date().toLocaleTimeString(); break;
+        case "who'syourdaddy":  response = 'that would be Gary';            break;
+        case "stop":            response = "Bye!!"; toggleBtn();            break;
     }
     if (!response) {
         window.open(`http://google.com/search?q=${rawText.replace("search", "")}`, "_blank");
